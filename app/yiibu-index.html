@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  	<title>Yiibu - About this site...</title>
+
+  	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+
+  	<meta name="author" content="Stephanie Rieger" />
+  	<meta name="description" content="lovingly crafted mobile experiences" />
+  	<meta name="keywords" content="mobile, web, design" />
+
+  	<link rel="shortcut icon" href="images/resources/icons/favicon.png" />
+  	<link rel="apple-touch-icon" href="images/resources/icons/shortcut.png" />
+  	<link rel="alternate" type="application/rss+xml" title="Yiibu RSS feed" href="http://yiibu.com/index.xml" />
+  	<link rel="stylesheet" type="text/css" href="styles/basic.css" media="screen, handheld" />
+  	<link rel="stylesheet" type="text/css" href="styles//mobile.css" media="only screen and (min-width: 320px) and (max-width: 640px)" />
+  	<link rel="stylesheet" type="text/css" href="styles/desktop.css" media="only screen and (min-width: 640px)" />
+  	<script type="text/javascript" src="scripts/default.js"></script>
+
+  	<style type="text/css">
+  		article.detail > header { border-top: 8px solid #C93213; }
+  		@media screen and (min-width: 640px) {
+  			article.detail > header { background-image: url("images/header.png"); background-position: top right; border: none; }
+  			article.detail > header h2 { background-color:#C93213; }
+  		}
+  	</style>
+  </head>
+
+  <body>
+  	<header>
+  		<h1><a href="/">yiibu</a></h1>
+
+  		<nav>
+  			<ul>
+  				<li ><a href="/articles/">articles</a></li>
+  				<li ><a href="/projects/">projects</a></li>
+  			</ul>
+  		</nav>
+
+  		<form id="search" method="post" action="search.html">
+  			<input type="text" name="search" placeholder="search..." />
+  			<input type="submit" name="sa" value="go" />
+  		</form>
+  	</header>
+
+  	<article class="detail wrap" id="top">
+  		<nav id="breadcrumbs">
+  				<p><a href="/homepage/">Home</a>&nbsp;&gt;&nbsp;<a href="../">About</a>&nbsp;&gt;&nbsp;About this site...</p>
+  		</nav>
+
+  		<header>
+          	<h2>About this site...</h2>
+  		</header>
+
+  		<aside class="contents">
+  	        <h4>Contents</h4>
+  			<ul>
+  	  			<li><a href="../">About Yiibu</a></li>
+  	            <li>About this site</li>
+  			</ul>
+      </aside>
+
+  		<h3>This site is a proof of concept for many of the ideas described in <a href="http://www.slideshare.net/bryanrieger/rethinking-the-mobile-web-by-yiibu/">Rethinking the Mobile Web</a>.</h3>
+    	<p>You can test many of our site&rsquo;s adaptive capabilities by simply resizing your desktop browser window. Certain capabilities—related to content adaptation—are however best viewed on a mobile device. Please read about our approach and content below for details.</p>
+    	<p>The content on this page outlines our approach back in September 2010. Please see <a href="http://www.slideshare.net/yiibu/pragmatic-responsive-design">Pragmatic Responsive Design</a>, which outlines our most recent approach (Sept 2011) and a case study of <a href="http://browser.nokia.com">a new responsive web site</a> we designed for Nokia.</p>
+
+      <h3>The approach</h3>
+      <p>The site is designed using (what is rapidly becoming known as) the &lsquo;<a href="http://www.lukew.com/ff/entry.asp?933">mobile first</a>&rsquo; principle. Also incorporated are elements of <a href="http://www.alistapart.com/articles/responsive-web-design/">responsive design</a>. (Some people are now calling this approach Mobile First Responsive Design).</p>
+      <ul>
+        	<li>The base content and default presentation are mobile, and optimized for the very simplest devices first. We've defined this as 'basic' support.</li>
+        	<li>Devices with small screens and media query support are served an enhanced layout—and occasionally—more complex content. We've called this 'mobile'.</li>
+        	<li>Finally, the layout and content are enhanced to reflect the 'desktop' context.</li>
+    	</ul>
+    	<p>On the first visit, the server checks for a 'properties' cookie containing specific browser 'feature support' results (obtained from tests carried out by a little bit of JavaScript). Devices that don't supply a 'properties' cookie, or have JavaScript disabled are always served the basic version of the site.</p>
+
+      <aside>
+      	<div class="note blue">
+        	<p>[07/01/11] The properties cookie concept has been through a bunch of iterations prompted by some very fiddly bugs on key browsers. We're now implementing a combination approach that uses DeviceAtlas for an initial basic pass of device detection, followed up by client-side feature detection. This provides a richer, more relevant and more accurate palette of properties. We're hoping to have this live (and documented!) by the end of January.</p>
+      	</div>
+    	</aside>
+
+      <h3>The mark-up</h3>
+      <p>We&rsquo;ve tried to write the simplest, cleanest, most semantic markup we could come up with given our overall goals and design. The markup includes very few non-semantic elements and a minimal number of classes and ids (and we're still planning to remove some more). We also designed the content to be as inherently flexible as possible. This initial step (combined with the &lsquo;mobile first&rsquo; approach) enables us to immediately support a large number of legacy devices and ensure that even edge-cases (like the fabled internet enabled toaster) will be able to render most of the content.</p>
+      <p>We've also incorporated many of the new HTML 5 structural elements. We also (opportunistically) chose to use the HTML 5 doctype to see if it might be possible to serve it to all devices—even those that would typically require an XHTML MP doctype. </p>
+
+      <aside>
+      	<div class="note red">
+        	<p>We're happy to report that so far, HTML 5 markup is degrading beautifully on all browsers that support HTML. Sadly (although not surprisingly), legacy XHTML MP devices are not recognizing the section level elements. See our <a href="http://spreadsheets.google.com/ccc?key=0AglzInh14B_-dFZsaHA5SmllX0dlVmUtaEpVLWNhbVE&hl=en">supported browser log</a> for details.</p>
+      	</div>
+    	</aside>
+
+      <h3>The style sheets</h3>
+      <p>We have three style sheets. A &lsquo;basic&rsquo; style sheet that is served to all devices. In practice, this is the only stylesheet which devices that are less than 240 pixels wide or don&rsquo;t respond to media queries will use.</p>
+      <p>The second &lsquo;mobile&rsquo; style sheet is aimed at today&rsquo;s smartphones. It is triggered by media queries on devices that are between 320 pixels and 640 pixels. This style sheet enables us to tweak the size of controls for touch manipulation (and we will use it to further enhance for this group at a later date).</p>
+    	<p>The final style sheet is aimed at displays over 640 pixels in width. The iPad and most desktop computers will fall into this category. This style sheet introduces a more complex layout and web fonts (actually mobile gets fonts as well right now but we're fixing that this week). &nbsp;IE is also targeted with conditionals and served (only) the desktop layout (we'll address IE mobile in a future update).</p>
+
+      <aside>
+      	<div class="note blue">
+        	<p>To encourage conversation and enable everyone to view source, we're purposely not removing whitespace or compressing our markup, styles and scripts as is commonly <a href="http://www.w3.org/TR/mobile-bp/">recommended for mobile</a>.</p>
+      	</div>
+    	</aside>
+
+      <h3>The content</h3>
+      <p>The content goes through a variety of adaptations and we plan to continue experimenting with this as it's already proving quite handy. Here are just a few of the current adaptations:</p>
+      <ul>
+        	<li>Alternate content is served for certain images (we will explain why and how in a future article). Some of our image adaptations can be tested by simply resizing your desktop browser window. Others will require a page refresh (on desktop browsers only).</li>
+        	<li>Alternate markup is served for complex content such as tables. Point your mobile browser to pages 2-4 in <a href="../../articles/practical-guide-to-nokia-browsers/page-2.html">A Practical Guide to Nokia Browsers</a> for examples of this type of adaptation. In this case, we&rsquo;ve provided a &lsquo;basic&rsquo;, &lsquo;mobile&rsquo; and &lsquo;desktop&rsquo; version of the content along with a link to a <a href="http://spreadsheets.google.com/ccc?key=0AglzInh14B_-dE9rcVFhU250V09CWkhvQzB1SXUtY3c&hl=en">much larger dataset on Google Docs</a> (which we realize is not yet mobile compatible).</li>
+        	<li>Speaking of 3rd party services…we were horrified to see that each SlideShare embed adds well over 500kb to the page, (and doesn't work on most mobile devices anyhow) so we created our <a href="../../articles/rethinking-the-mobile-web/page-3.html#slideshow">own lightweight HTML slide show</a> (very basic, expect it to evolve soon) which by our count works on well over 100 devices (<a href="http://spreadsheets.google.com/ccc?key=0AglzInh14B_-dFZsaHA5SmllX0dlVmUtaEpVLWNhbVE&hl=en">lots of Nokia smartphones, Android, iPhone and Blackberry</a>). Here as well, we serve alternate sizes for smaller devices although as the size decreases, so does legibility.</li>
+        	<li>And speaking of graphics. We had experimented with SVG fonts on mobile (currently using <a href="http://en.wikipedia.org/wiki/TrueType" title="Wikipedia: TrueType">TrueType (ttf)</a>, <a href="http://people.mozilla.com/~jkew/woff/woff-2009-09-16.html" title="WOFF File Format">WebOpenFontFormat (woff)</a> and Microsoft's <a href="http://en.wikipedia.org/wiki/Embedded_OpenType">Embedded OpenType (eot)</a> based fonts which are served only to desktop browsers), but discontinued use of them after <a href="http://noscope.com/journal/2010/09/the-peculiarly-bad-situation-with-web-fonts-on-apples-ipad" title="The peculiarly bad situation with web-fonts on Apples iPad">consistently crashing mobile Safari</a>. We have not yet experimented with SVG for content, but we plan to do so very soon.</li>
+    	</ul>
+
+      <h3>Still pondering…</h3>
+      <p>This is a work in progress and there&rsquo;s still lots to do. We will be adapting and documenting this approach in detail over the coming months and are  keenly aware that for each problem, there may be multiple solutions. Sometimes the simplest solution comes from taking a good look at your content so we're keen to do this rather than focus entirely on the technology. Here are just a few things we&rsquo;re still working on:</p>
+      <ul>
+        	<li>We&rsquo;re adapting content in a variety of ways. Some are working really well, others not so much. We&rsquo;d like to experiment further.</li>
+        	<li>We want to see where the various approaches breaks. Will certain large devices accidentally receive the mobile layout? Will some devices get the wrong content. And when this happens, is the experience still acceptable? (We&rsquo;re already finding this on certain proxy browsers that are serving the 'mobile' styles but the 'basic' content. So far, the experience isn&rsquo;t really affected).</li>
+        	<li>How do we deal with 3rd party content such as Slide Share, Flickr embeds and social media bookmarklets? Many of these link to massive script libraries that shouldn&rsquo;t be served to small devices and degrade poorly if the scripts fail.</li>
+        	<li>We&rsquo;re guessing there are some/many bugs in IE (desktop and mobile) that we haven&rsquo;t found yet :-).</li>
+    	</ul>
+
+      <h3>Supported browsers and devices</h3>
+      <p>At the moment we can confidently state that this site works beautifully on most modern smartphones, many legacy smartphones, and most tablets and desktop browsers.</p>
+    	<p>We&rsquo;re keeping  <a href="http://spreadsheets.google.com/ccc?key=0AglzInh14B_-dFZsaHA5SmllX0dlVmUtaEpVLWNhbVE&hl=en">a log  of all supported browsers</a>  (in the form of a Google Spreadsheet). Browsers are tagged in green if the site works beautifully on them. Orange means there are minor problems (that we think we can fix). Red means there are significant problems. We may not be able to fix these as they often relate to low browser spec or significant bugs. Some &lsquo;green&rsquo; browsers have the odd cosmetic quirks. These have been noted but as long as they don&rsquo;t affect the overall experience, the browser still gets a pass.&nbsp; </p>
+      <p>We plan to test on lots more devices and are still sorting out how to best involve the community in this (if the community even wants to be involved :-))</p>
+      <p><strong>Update:</strong> In response to initial queries from the community, we're also writing an article to explain our testing choices and the significance of each browser from a market share point of view. We should have this information up <strike>mid November</strike> (pipe dream...) as soon as we can.</p>
+
+      <section id="related">
+  			<h4>Related Articles</h4>
+  			<nav>
+  				<ul>
+  					<li><a href="/articles/rethinking-the-mobile-web/">Rethinking the mobile web</a></li>
+  					<li><a href="http://www.lukew.com/ff/entry.asp?933">Mobile first</a></li>
+  					<li><a href="http://www.alistapart.com/articles/responsive-web-design/">Responsive design</a></li>
+  					<li><a href="http://tech.groups.yahoo.com/group/mobile-web">Yahoo mobile web group</a></li>
+  				</ul>
+  			</nav>
+  		</section>
+    </article>
+
+  	<footer>
+  		<div>
+  			<section id="about">
+  				<h3>About</h3>
+  				<p>Since 2004, Yiibu has conceptualised, designed, and developed elegant, informative and easy to use interactive media experiences for diverse platforms. <a href="/about/" title="More about Yiibu...">More...</a></p>
+  			</section>
+
+  			<section id="elsewhere">
+  				<h3>Elsewhere</h3>
+  				<ul>
+  					<li><a href="http://twitter.com/yiibu" class="twitter" title="Tweets.">Twitter</a></li>
+  					<li><a href="http://yiibu.tumblr.com/" class="tumblr" title="Something resembling a blog...">Tumblr</a></li>
+  					<li><a href="http://www.delicious.com/yiibu" class="delicious" title="A vast collection of bookmarks!">Delicious</a></li>
+  					<li><a href="http://www.slideshare.net/bryanrieger" class="slideshare" title="Our presentations.">SlideShare</a></li>
+  				</ul>
+  			</section>
+
+  			<section id="contact">
+  				<h3>Contact</h3>
+  				<p class="vcard">
+  					<span class="email"><a href="mailto:hello@yiibu.com?subject=Hello Yiibus!">hello@yiibu.com</a></span>
+  					<span class="tel"><a href="tel:+44 0 7957651177">+44 (0) 7957 651177</a></span>
+  					<span class="adr"><span class="locality">Edinburgh</span>, <span class="country-name">United Kingdom</span></span>
+  				</p>
+  				<p class="license">Unless otherwise noted, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.<img src="http://yiibu.com/includes/analytics.php?utmac=UA-69046-1&amp;utmn=1179380267&amp;utmr=-&amp;utmp=%2Fabout%2Fsite%2Findex.html&amp;guid=ON" /></p>
+  			</section>
+  		</div>
+  	</footer>
+  	<!-- <script type="text/javascript">
+  		var _gaq = _gaq || [];
+  		_gaq.push(['_setAccount', 'UA-69046-1']);
+  		_gaq.push(['_trackPageview']);
+
+  		(function() {
+  			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  		})();
+  	</script> -->
+  </body>
+</html>
