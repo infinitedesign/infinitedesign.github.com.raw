@@ -5,75 +5,105 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
   <head>
+    <title>Blank-Slate - <%= @item[:title] %></title>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Web Experience Main Title - <%= @item[:title] %></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <meta name="author" content="InfiniteDesign" />
+    <meta name="description" content="Progressive Enhancement Mobile First Responsive Web Design" />
+    <meta name="keywords" content="mobile, responsive, progressive, web, design, experience" />
 
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" href="images/resources/icons/favicon.png" />
+    <link rel="apple-touch-icon" href="images/resources/icons/shortcut.png" />
+    <link rel="alternate" type="application/rss+xml" title="InfiniteDesign RSS feed" href="http://infinitedesign.co/index.xml" />
+    <link rel="stylesheet" type="text/css" href="styles/basic.css" media="screen, handheld" />
+    <link rel="stylesheet" type="text/css" href="styles/mobile.css" media="only screen and (min-width: 320px) and (max-width: 640px)" />
+    <link rel="stylesheet" type="text/css" href="styles/desktop.css" media="only screen and (min-width: 640px)" />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" media="only screen and (min-width: 1024px)">
+
+    <!-- TODO: Double check that I need this: -->
     <script src="scripts/vendor/modernizr.min.js"></script>
 
-    <!-- nanoc stat tracker -->
-    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
+    <script type="text/javascript" src="scripts/default.js"></script>
+
+    <style type="text/css">
+      article.detail > header { border-top: 8px solid #C93213; }
+      @media screen and (min-width: 640px) {
+        article.detail > header { background-image: url("images/header.png"); background-position: top right; border: none; }
+        article.detail > header h2 { background-color:#C93213; } }
+    </style>
+
   </head>
 
   <body>
-    <!--[if lt IE 7]>
-      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-    <![endif]-->
+    <header>
+      <h1><a href="index.html">Blank-Slate</a></h1>
 
-    <div class="container-fluid" style="margin-top:50px">
-      <div class="hero-unit">
-        <h1>WOAH!</h1>
-        <p>You now have</p>
+      <nav>
         <ul>
-          <li>HTML5 Boilerplate</li>
-          <li>Twitter Bootstrap</li>
-          <li>Twitter Bootstrap plugins</li>
+          <li ><a href="/articles/index.html">articles</a></li>
+          <li ><a href="/projects/index.html">projects</a></li>
         </ul>
-        <p>installed.</p>
-        <h3>Enjoy coding! - Yeoman</h3>
+      </nav>
+
+      <form id="search" method="post" action="search.html">
+        <input type="text" name="search" placeholder="search..." />
+        <input type="submit" name="sa" value="go" />
+      </form>
+    </header>
+
+
+    <%= yield %>
+
+    <footer>
+      <div>
+        <section id="about">
+          <h3>About</h3>
+          <p>Blank-Slate is a amalegom of Yeoman, nanoc, Yiibu, and 320andUp. Progressive Enhancement Mobile First Responsive Web Design creates <em>Beautiful</em> Web Experiences<a href="/about/index.html" title="More about Blank-Slate...">More...</a></p>
+        </section>
+
+        <section id="elsewhere">
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="http://twitter.com/blank-slate" class="twitter" title="Tweets.">Twitter</a></li>
+            <li><a href="http://blank-slate.tumblr.com/" class="tumblr" title="Blog?">Tumblr</a></li>
+            <li><a href="http://www.delicious.com/blank-slate" class="delicious" title="Bookmarks!">Delicious</a></li>
+            <li><a href="http://www.slideshare.net/blank-slate" class="slideshare" title="Slideshows.">SlideShare</a></li>
+          </ul>
+        </section>
+
+        <section id="contact">
+          <h3>Contact</h3>
+          <p class="vcard">
+            <span class="email"><a href="mailto:thomas@infinitedesign.co?subject=Hello InfiniteDesign!">hello@yiibu.com</a></span>
+            <span class="tel"><a href="tel:+18888873334">+1-888-887-3334</a></span>
+            <span class="adr"><span class="locality">New York City</span>, <span class="country-name">United States</span></span>
+          </p>
+          <p class="license">Unless otherwise noted, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
+        </section>
       </div>
-    </div>
-
-    <div class="container-fluid">
-      <%= yield %>
-    </div>
-
-    <div class="container-fluid">
-      <h2>Documentation</h2>
-      <ul>
-        <li><a href="http://nanoc.stoneship.org/docs/">Documentation</a></li>
-        <li><a href="http://nanoc.stoneship.org/docs/3-getting-started/">Getting Started</a></li>
-      </ul>
-      <h2>Community</h2>
-      <ul>
-        <li><a href="http://groups.google.com/group/nanoc/">Discussion Group</a></li>
-        <li><a href="irc://chat.freenode.net/#nanoc">IRC Channel</a></li>
-        <li><a href="http://projects.stoneship.org/trac/nanoc/">Wiki</a></li>
-      </ul>
-    </div>
-
-
+    </footer>
 
 
     <!-- uncomment for deploy -->
     <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> -->
-    <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
+    <!-- <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script> -->
 
+    <!-- uncomment for deploy -->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
+    <!-- <script>
       var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+    </script> -->
 
+    <!-- Twitter Bootstrap Currently Disabled: Uncomment @import and pluggins to use -->
     <!-- build:js scripts/plugins.js -->
-    <script src="scripts/vendor/bootstrap/bootstrap-affix.js"></script>
+    <!-- <script src="scripts/vendor/bootstrap/bootstrap-affix.js"></script>
     <script src="scripts/vendor/bootstrap/bootstrap-alert.js"></script>
     <script src="scripts/vendor/bootstrap/bootstrap-dropdown.js"></script>
     <script src="scripts/vendor/bootstrap/bootstrap-tooltip.js"></script>
@@ -85,7 +115,7 @@
     <script src="scripts/vendor/bootstrap/bootstrap-carousel.js"></script>
     <script src="scripts/vendor/bootstrap/bootstrap-scrollspy.js"></script>
     <script src="scripts/vendor/bootstrap/bootstrap-collapse.js"></script>
-    <script src="scripts/vendor/bootstrap/bootstrap-tab.js"></script>
+    <script src="scripts/vendor/bootstrap/bootstrap-tab.js"></script> -->
     <!-- endbuild -->
   </body>
 </html>
