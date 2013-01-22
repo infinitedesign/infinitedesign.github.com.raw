@@ -15,82 +15,75 @@ or mobile software). */
 // ==========================================================
 
 @font-face {
-font-family: 'FontAwesome';
-src: url('fonts/fontawesome-webfont.eot');
-src: url('fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-url('fonts/fontawesome-webfont.woff') format('woff'),
-url('fonts/fontawesome-webfont.ttf') format('truetype'),
-url('fonts/fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'),
-url('fonts/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
-font-weight : normal;
-font-style : normal; }
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot');
+  src: url('fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/fontawesome-webfont.woff') format('woff'),
+  url('fonts/fontawesome-webfont.ttf') format('truetype'),
+  url('fonts/fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'),
+  url('fonts/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
+  font-weight : normal;
+  font-style : normal; }
 
 [class^="icon-"],
 [class*=" icon-"] {
-display : inline;
-width : auto;
-height : auto;
-line-height : inherit;
-vertical-align : baseline;
-background-image : none;
-background-position : 0 0;
-background-repeat : repeat; }
+  display : inline;
+  width : auto;
+  height : auto;
+  line-height : inherit;
+  vertical-align : baseline;
+  background-image : none;
+  background-position : 0 0;
+  background-repeat : repeat; }
 
 li[class^="icon-"],
 li[class*=" icon-"] {
-display : block; }
+  display : block; }
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-font-family : FontAwesome;
-font-weight : normal;
-font-style : normal;
-display : inline-block;
-text-decoration : inherit; }
+  font-family : FontAwesome;
+  font-weight : normal;
+  font-style : normal;
+  display : inline-block;
+  text-decoration : inherit; }
 
 a [class^="icon-"],
 a [class*=" icon-"] {
-display : inline-block;
-text-decoration : inherit; }
+  display : inline-block;
+  text-decoration : inherit; }
 
 /* makes the font 33% larger relative to the icon container */
 .icon-large:before {
-vertical-align : top;
-font-size : 4/3em; }
+  vertical-align : top;
+  font-size : 4/3em; }
 
 .btn {
-[class^="icon-"],
-[class*=" icon-"] {
-/* keeps button heights with and without icons the same */
-line-height : .9em; }
-}
+  [class^="icon-"],
+  [class*=" icon-"] {
+    /* keeps button heights with and without icons the same */
+    line-height : .9em; } }
 
 li {
-[class^="icon-"],
-[class*=" icon-"] {
-display : inline-block;
-width : 1.25em;
-text-align : center; }
-
-.icon-large[class^="icon-"],
-.icon-large[class*=" icon-"]  {
-/* 1.5 increased font size for icon-large * 1.25 width */
-width : 1.5*1.25em; }
-}
+  [class^="icon-"],
+  [class*=" icon-"] {
+  display : inline-block;
+  width : 1.25em;
+  text-align : center; }
+  .icon-large[class^="icon-"],
+  .icon-large[class*=" icon-"]  {
+    /* 1.5 increased font size for icon-large * 1.25 width */
+    width : 1.5*1.25em; } }
 
 li[class^="icon-"],
 li[class*=" icon-"] {
-margin-left: 0;
-list-style-type: none;
-
-&:before {
-text-indent: -2em;
-text-align: center;
-}
-&.icon-large:before {
-text-indent: -4/3em;
-}
-}
+  margin-left: 0;
+  list-style-type: none;
+  &:before {
+    text-indent: -2em;
+    text-align: center; }
+  &.icon-large:before {
+    text-indent: -4/3em; } }
 
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
     readers do not read off random characters that represent icons */

@@ -16,10 +16,8 @@
   *zoom: 1;
   padding: 6px 11px 6px;
   margin-bottom: 0;
-  font: {
-    weight: bold;
-    family: $basefont;
-  }
+  font-weight: bold;
+  font-family: $basefont;
   @include font-size(12);
   line-height: $baselineheight;
   color: $buttoncolor;
@@ -27,179 +25,139 @@
   vertical-align: middle;
   background-color: $buttonbackground;
   @include greygrad;
-  border: $buttonborderwidth $buttonborderstyle $buttonbordercolor {
-    bottom-color: $buttonbottombordercolor;
-  }
+  border: $buttonborderwidth $buttonborderstyle $buttonbordercolor
+  border-bottom-color: $buttonbottombordercolor;
   @include border-radius(4px);
   cursor: pointer;
   *margin-left: .3em;
-
   &:visited,
   &:hover {
     color: $buttoncolor;
-    text-decoration: none;
-  }
-}
+    text-decoration: none; } }
 
-input[type="submit"].btn:hover { border-color: $buttonbordercolor; }
+input[type="submit"].btn:hover {
+  border-color: $buttonbordercolor; }
 
-.btn:first-child { *margin-left: 0; }
+.btn:first-child {
+  *margin-left: 0; }
 
 // disabled
 
 .btn-disabled {
   @include opacity(.5);
-  cursor: default;
-}
+  cursor: default; }
 
 .btn-error {
   @include errorgrad;
-  border: {
-    color: darken($errorcolor, 15%);
-    bottom-color: darken($errorcolor, 20%);
-  }
+  border-color: darken($errorcolor, 15%);
+  border-bottom-color: darken($errorcolor, 20%);
   color: $white;
-
   &:visited,
-  &:hover { color: $white; }
-}
+  &:hover {
+    color: $white; } }
 
 // info
 
 .btn-info {
   @include infograd;
-  border: {
-    color: darken($infocolor, 15%);
-    bottom-color: darken($infocolor, 20%);
-  }
+  border-color: darken($infocolor, 15%);
+  border-bottom-color: darken($infocolor, 20%);
   color: darken($infocolor, 50%);
-
   &:visited,
-  &:hover { color: darken($infocolor, 50%); }
-}
+  &:hover {
+    color: darken($infocolor, 50%); } }
 
 // inverse
 
 .btn-inverse {
   @include inversegrad;
-  border: {
-    color: darken($inverscolor, 15%);
-    bottom-color: darken($inverscolor, 20%);
-  }
+  border-color: darken($inverscolor, 15%);
+  border-bottom-color: darken($inverscolor, 20%);
   color: $white;
-
   &:visited,
-  &:hover { color: $white; }
-}
+  &:hover {
+    color: $white; } }
 
 // primary
 
 .btn-primary {
   @include basegrad;
-  border: {
-    color: darken($basecolor, 15%);
-    bottom-color: darken($basecolor, 20%);
-  }
+  border-color: darken($basecolor, 15%);
+  border-bottom-color: darken($basecolor, 20%);
   color: $white;
-
   &:visited,
-  &:hover { color: $white; }
-}
+  &:hover {
+    color: $white; } }
 
 // success
 
 .btn-success {
   @include successgrad;
-  border: {
-    color: darken($successcolor, 15%);
-    bottom-color: darken($successcolor, 20%);
-  }
-}
+  border-color: darken($successcolor, 15%);
+  border-bottom-color: darken($successcolor, 20%); }
 
 // warning
 
 .btn-warning {
   @include warninggrad;
-  border: {
-    color: darken($warningcolor, 15%);
-    bottom-color: darken($warningcolor, 20%);
-  }
-}
+  border-color: darken($warningcolor, 15%);
+  border-bottom-color: darken($warningcolor, 20%); }
 
 // sizes
 
 .btn-extlarge {
   padding: 11px 22px;
   @include font-size(21);
-  @include border-radius(4px);
-}
+  @include border-radius(4px); }
 
 .btn.btn-large {
   *padding: {
     top: 7px;
-    bottom: 7px;
-  }
-}
+    bottom: 7px; } }
 
 .btn-large {
   padding: 11px 22px;
   @include font-size(14);
   line-height: normal;
-  @include border-radius(4px);
-}
+  @include border-radius(4px); }
 
 .btn-small {
   padding: 6px 10px;
   @include font-size(11);
-  line-height: 16px;
-}
+  line-height: 16px; }
 
 .btn-mini {
   padding: 3px 5px;
   @include font-size(11);
-  line-height: 14px;
-}
+  line-height: 14px; }
 
 .btn-group {
   position: relative;
   *zoom: 1;
   *margin-left: .3em;
   margin-bottom: $baseline;
-
   .btn {
     position: relative;
     float: left;
     margin-left: -1px;
     @include border-radius(0);
-
     &:first-child {
       margin-left: 0;
-      @include border-left-radius(2px);
-    }
-
-    &:last-child { @include border-right-radius(2px); }
-
+      @include border-left-radius(2px); }
+    &:last-child {
+      @include border-right-radius(2px); }
     &.large {
       &:first-child {
         margin-left: 0;
-        @include border-left-radius(4px);
-      }
-
-      &:last-child { @include border-right-radius(4px); }
-    }
-  }
-}
+        @include border-left-radius(4px); }
+      &:last-child {
+        @include border-right-radius(4px); } } } }
 
 .btn-toolbar {
   clear: both;
-  margin: {
-    top: $baselineheight / 2;
-    bottom: $baselineheight / 2;
-  }
-
+  margin-top: $baselineheight / 2;
+  margin-bottom: $baselineheight / 2;
   .btn-group {
     display: inline-block;
     *display: inline;
-    *zoom: 1;
-  }
-}
+    *zoom: 1; } }
