@@ -1,8 +1,8 @@
 // ==========================================================
 
-// 320 and Up by Andy Clarke
-// Version: 3.0
-// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Blank-Slate
+// Version: 1.0
+// URL: github.com/infinitedesign/blank-slate
 // Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 // ==========================================================
@@ -71,15 +71,13 @@
 // Contain floats
 
 @mixin clearfix {
-  *zoom : 1;
+  *zoom : 1; // For IE 6/7 only: Included to trigger hasLayout and contain floats
   &:before, &:after {
     display: table;
     content : ""; }
   &:after {
     clear : both; } }
 
-.clearfix {
-  @include clearfix; }
 
 // For image replacement
 
@@ -116,24 +114,24 @@
 // Hidden but available to speaking browsers
 
 @mixin visuallyhidden() {
-  overflow : hidden;
-  position : absolute;
+  border : 0;
   clip : rect(0 0 0 0);
   height : 1px;
-  width : 1px;
   margin : -1px;
+  overflow : hidden;
   padding : 0;
-  border : 0;
+  position : absolute;
+  width : 1px;
   // Make visuallyhidden focusable with a keyboard
   &.focusable {
     &:active,
     &:focus {
-      position : static;
       clip : auto;
       height : auto;
-      width : auto;
       margin : 0;
-      overflow: visible; } } }
+      overflow: visible;
+      position : static;
+      width : auto; } } }
 
 // 6. LAYOUT 				==============================
 

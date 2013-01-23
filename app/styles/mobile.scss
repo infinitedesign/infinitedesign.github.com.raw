@@ -1,78 +1,124 @@
 /* mobile.css Stylesheet */
 
+/* import */
+
+// Compass
+@import "compass";
+
+/* resets */
+/* already included in basic.scss */
+
+/* variables */
+@import "320_and_up/variables";
+
 /* mixins */
-  /* empty */
+@import "320_and_up/mixins";
+
+/* helper classes */
+@import "helperclasses";
+
+/* site wide styles (html, body) */
+/* already included in basic.scss */
+
+/* typography */
+/* already included in basic.scss */
 
 /* dimensions */
-  /* empty */
+/* empty */
 
 /* colours */
-  /* empty */
+/* already included in basic.scss */
+
+/* texture */
+/* already included in basic.scss */
+
+/* elements */
+/* already included in basic.scss */
+
+/* forms */
+/* already included in basic.scss */
+
+/* buttons */
+/* already included in basic.scss */
+
+/* tables */
+/* already included in basic.scss */
+
+/* page level layout */
+/* already included in basic.scss */
+
+/* print */
+/* already included in basic.scss */
 
 /* fonts */
-  /* empty */
+@import "320_and_up/font-awesome";
 
 /* layout */
-body > header nav {
-  clear: none;
-  margin: .3em 0 0 1.2em;
-  padding: 0;
-  float: left;
-  display: block;
-  overflow: hidden; }
-  body > header nav ul {
-    display: block;
-    width: 100%; }
-  body > header nav li {
+
+body > {
+  header nav {
+    clear: none;
+    margin: .3em 0 0 1.2em;
+    padding: 0;
     float: left;
     display: block;
-    margin: 0 1em 0 0;
-    padding: 0 1em 0 0;
-    font-size: 1em;
-    font-weight: 300;
-    font-family: "Museo", "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif;
-    border-right: 1px #666 solid; }
-    body > header nav li:hover a {
-      color: #658e15; }
-    body > header nav li a {
-      width: 100%;
-      display: block; }
-  body > header nav li.current {
-    font-weight: 300; }
-    body > header nav li.current a {
-      color: #658e15; }
-  body > header nav li:last-child {
-    border: none; }
-body > article {
-  clear: both;
-  display: block;
-  margin: 0px auto;
-  padding: 0px 2%;
-  min-width: 220px;
-  max-width: 960px;
-  overflow: hidden; }
+    overflow: hidden;
+    ul {
+      display: block;
+      width: 100%; }
+    li {
+      float: left;
+      display: block;
+      margin: 0 1em 0 0;
+      padding: 0 1em 0 0;
+      font-size: 1em;
+      font-weight: 300;
+      font-family: "Museo", "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif;
+      border-right: 1px #666 solid;
+      &:hover a {
+        color: #658e15; }
+      a {
+        width: 100%;
+        display: block; }
+      &.current {
+        font-weight: 300;
+        a {
+          color: #658e15; } }
+      &:last-child {
+        border: none; } } }
+  article {
+    clear: both;
+    display: block;
+    margin: 0px auto;
+    padding: 0px 2%;
+    min-width: 220px;
+    max-width: 960px;
+    overflow: hidden; } }
 
 /* content elements */
+
 article.highlight {
-  margin: 0 0 0 0; }
-  article.highlight:last-child {
+  margin: 0 0 0 0;
+  &:last-child {
     margin-right: 0; }
-  article.highlight img {
+  img {
     padding: 0; }
-  article.highlight h3 {
+  h3 {
     font-size: 1.2em;
     padding: .3em 0.5em .3em;
     margin-bottom: 0; }
-  article.highlight p {
-    padding: 0 .2em 0 .3em; }
+  p {
+    padding: 0 .2em 0 .3em; } }
 
-ul.highlight li h3 {
-  clear: none;
-  padding-top: 0; }
-ul.highlight li img {
-  margin-right: .5em; }
+ul.highlight li {
+  h3 {
+    clear: none;
+    padding-top: 0; }
+  img {
+    margin-right: .5em; } }
 
 /* design */
+
 body > header h1 {
   font-size: 1.2em; }
 
@@ -84,15 +130,16 @@ ul li {
   margin: 0 .5em 0 2em; }
 
 /* components */
+
 #breadcrumbs p {
   font-family: Georgia, "Times New Roman", Times, serif; }
 
 #pagination li {
   font-size: 1.2em;
   padding: 0 .4em;
-  margin: 0 .2em; }
-#pagination li.previous {
-  float: left; }
+  margin: 0 .2em;
+  &.previous {
+    float: left; } }
 
 #biography img {
   background-color: #fff;
@@ -102,13 +149,34 @@ ul li {
 .note {
   font-family: Helvetica, Arial, sans-serif; }
 
-div#slideshow ul li a {
-  width: 100%;
-  display: block; }
-div#slideshow ul li a:hover {
-  cursor: hand;
-  background-color: white; }
-div#slideshow ul li.previous {
-  font-size: 1.2em; }
-div#slideshow ul li.next {
-  font-size: 1.2em; }
+div#slideshow ul li {
+  a {
+    width: 100%;
+    display: block;
+    &:hover {
+      cursor: hand;
+      background-color: white; } }
+  &.previous, &.next {
+    font-size: 1.2em; } }
+
+// 360px
+@media only screen and (min-width: 360px) {
+  @import "320_and_up/360"; }
+
+// 480px
+@media only screen and (min-width: 480px) {
+  @import "320_and_up/480"; }
+
+// 600px
+@media only screen and (min-width: 600px) {
+  @import "320_and_up/600"; }
+
+// 640px
+@media only screen and (min-width: 640px) {
+  @import "320_and_up/640"; }
+
+// 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+  @import "320_and_up/2x"; }

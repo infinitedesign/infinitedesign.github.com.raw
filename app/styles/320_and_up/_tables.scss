@@ -1,8 +1,8 @@
 // ==========================================================
 
-// 320 and Up by Andy Clarke
-// Version: 3.0
-// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Blank-Slate
+// Version: 1.0
+// URL: github.com/infinitedesign/blank-slate
 // Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 // ==========================================================
@@ -19,6 +19,7 @@ table {
   th,
   td {
     padding : 8px;
+    padding : 0.8rem;
     vertical-align : top;
     border-top : $tableborderwidth $tableborderstyle $tableborder;
     @include font-size(14);
@@ -40,7 +41,23 @@ table {
     @include transition(background-color .25s 0 linear); }
   tbody tr:hover td,
   tbody tr:hover th {
-    background-color : $tablehover; } }
+    background-color : $tablehover; }
+  // Added from basic.scss
+  ul {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    line-height: 1.4em;
+    li {
+      list-style-type: none;
+      margin: 0; } }
+  p {
+    margin: 0; }
+  caption {
+    text-align: left;
+    caption-side: bottom;
+    padding: 0.5em 0 0 0; } }
+  // end added from basic.scss
 
 // CONDENSED ====================================================
 

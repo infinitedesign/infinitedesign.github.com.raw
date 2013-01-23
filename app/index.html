@@ -20,12 +20,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="InfiniteDesign" />
     <meta name="description" content="Progressive Enhancement Mobile First Responsive Web Design" />
     <meta name="keywords" content="mobile, responsive, progressive, web, design, experience" />
-    <meta name="HandheldFriendly" content="True"> <!-- http://t.co/dKP3o1e TODO: Check what this is -->
-    <meta name="MobileOptimized" content="320">   <!-- http://t.co/dKP3o1e TODO: Check what this is -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="cleartype" content="on">
     <link rel="alternate" type="application/rss+xml" title="Blank-Slate RSS feed" href="http://infinitedesign.co/index.xml" />
 
 
@@ -33,10 +34,10 @@
     <!-- Stylesheets -->
     <!-- ************************************************** -->
     <link rel="stylesheet" type="text/css" href="styles/basic.css" media="screen, handheld" />
-    <link rel="stylesheet" type="text/css" href="styles/mobile.css" media="only screen and (min-width: 320px) and (max-width: 640px)" />
-    <link rel="stylesheet" type="text/css" href="styles/desktop.css" media="only screen and (min-width: 640px)" />
+    <link rel="stylesheet" type="text/css" href="styles/mobile.css" media="only screen and (min-width: 320px) and (max-width: 720px)" />
+    <link rel="stylesheet" type="text/css" href="styles/desktop.css" media="only screen and (min-width: 720px)" />
     <!-- For all browsers -->
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles/main.css"> -->
 
 
     <!-- ************************************************** -->
@@ -55,44 +56,31 @@
     <link rel="shortcut icon" href="favicon.ico">
     <!-- 32x32 -->
     <link rel="shortcut icon" href="images/favicon.png">
-    <!-- ************************************************** -->
+
     <!-- iOS apple-touch-icons -->
-    <link rel="apple-touch-icon" href="images/resources/icons/shortcut.png" />
-    <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-    <!-- <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png"> -->
-    <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-    <!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png"> -->
-    <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-    <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png"> -->
-    <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-    <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png"> -->
-    <!-- ************************************************** -->
-    <!--iOS Web App Settings-->
-    <!-- <meta name="apple-mobile-web-app-title" content="320 and Up"> -->
-    <!-- <meta name="viewport" content="initial-scale=1.0"> (Use if apple-mobile-web-app-capable below is set to yes) -->
-    <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
-    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
-    <!-- ************************************************** -->
-    <!-- iOS Startup Images -->
-    <!-- iPhone 3GS, pre-2011 iPod Touch -->
-    <!-- <link rel="apple-touch-startup-image" href="img/startup/startup-320x460.png" media="screen and (max-device-width:320px)"> -->
-    <!-- iPhone 4, 4S and 2011 iPod Touch-->
-    <!-- <link rel="apple-touch-startup-image" href="img/startup/startup-640x920.png" media="(max-device-width:480px) and (-webkit-min-device-pixel-ratio:2)"> -->
-    <!-- iPhone 5 and 2012 iPod Touch -->
-    <!-- <link rel="apple-touch-startup-image" href="img/startup/startup-640x1096.png" media="(max-device-width:548px) and (-webkit-min-device-pixel-ratio:2)"> -->
-    <!-- iPad landscape -->
-    <!-- <link rel="apple-touch-startup-image" sizes="1024x748" href="img/startup/startup-1024x748.png" media="screen and (min-device-width:481px) and (max-device-width:1024px) and (orientation:landscape)"> -->
-    <!-- iPad Portrait -->
-    <!-- <link rel="apple-touch-startup-image" sizes="768x1004" href="img/startup/startup-768x1004.png" media="screen and (min-device-width:481px) and (max-device-width:1024px) and (orientation:portrait)"> -->
-    <!-- ************************************************** -->
-    <!-- Windows 8 / RT -->
-    <meta name="msapplication-TileImage" content="img/apple-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#000">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+    <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#222222">
+
+    <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+    <!--
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
+    -->
     <!-- ************************************************** -->
 
 
-    <!-- TODO: Check what this does -->
-    <meta http-equiv="cleartype" content="on">
+    <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+    <!--
+    <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+    -->
 
 
     <style type="text/css">
@@ -154,7 +142,9 @@
 
   <aside>
     <div class="note blue">
-      <p>Blank-Slate is a amalegom of Yeoman, nanoc, Yiibu, and 320andUp. Progressive Enhancement Mobile First Responsive Web Design creates <em>Beautiful</em> Web Experiences<a href="/about/index.html" title="More about Blank-Slate...">More...</a></p>
+      <p>
+        Blank-Slate is an amalegom of Yeoman, nanoc, Yiibu, and 320andUp. Progressive Enhancement Mobile First Responsive Web Design creates <em>Beautiful</em> Web Experiences<a href="about/index.html" title="More about Blank-Slate...">More...</a>
+      </p>
     </div>
   </aside>
 
@@ -247,12 +237,14 @@
 
     <!-- uncomment for deploy -->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <!-- <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script> -->
+    <!--
+    <script>
+        var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+        g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+        s.parentNode.insertBefore(g,s)}(document,"script"));
+    </script>
+    -->
 
     <!-- build:js scripts/plugins.js -->
     <script type="text/javascript" src="scripts/vendor/bootstrap/bootstrap-affix.js"></script>
@@ -268,8 +260,9 @@
     <script type="text/javascript" src="scripts/vendor/bootstrap/bootstrap-scrollspy.js"></script>
     <script type="text/javascript" src="scripts/vendor/bootstrap/bootstrap-collapse.js"></script>
     <script type="text/javascript" src="scripts/vendor/bootstrap/bootstrap-tab.js"></script>
+    <script type="text/javascript" src="scripts/vendor/zepto.min.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
-    <!-- TODO: Add helper.js back in when it's been debugged -->
+    <script type="text/javascript" src="scripts/vendor/helper.js"></script>
     <script type="text/javascript" src="scripts/vendor/default.js"></script>
     <!-- endbuild -->
   </body>

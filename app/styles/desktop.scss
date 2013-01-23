@@ -1,15 +1,57 @@
 /* desktop.css Stylesheet */
 
+/* import */
+
+// Compass
+@import "compass";
+
+/* resets */
+/* already included in basic.scss */
+
+/* variables */
+@import "320_and_up/variables";
+
 /* mixins */
-  /* empty */
+@import "320_and_up/mixins";
+
+/* helper classes */
+@import "helperclasses";
+
+/* site wide styles (html, body) */
+/* already included in basic.scss */
+
+/* typography */
+/* already included in basic.scss */
 
 /* dimensions */
-  /* empty */
+/* empty */
 
 /* colours */
-  /* empty */
+/* already included in basic.scss */
+
+/* texture */
+/* already included in basic.scss */
+
+/* elements */
+/* already included in basic.scss */
+
+/* forms */
+/* already included in basic.scss */
+
+/* buttons */
+/* already included in basic.scss */
+
+/* tables */
+/* already included in basic.scss */
+
+/* page level layout */
+/* already included in basic.scss */
+
+/* print */
+/* already included in basic.scss */
 
 /* fonts */
+@import "320_and_up/font-awesome";
 /* Museo */
 /*
 @font-face {
@@ -35,137 +77,140 @@
 */
 
 /* layout */
+
 body {
   background-image: url("../images/work-in-progress.png");
   background-position: top right;
-  background-repeat: no-repeat; }
-  body > header {
-    height: 2.7em;
-    margin: 0 auto 1em auto; }
-    body > header h1 {
-      float: left; }
-    body > header nav {
-      clear: none;
-      margin: .3em 0 0 1.2em;
-      padding: 0;
-      float: left;
-      display: block;
-      overflow: hidden; }
-      body > header nav ul {
-        display: block;
-        width: 100%; }
-      body > header nav li {
+  background-repeat: no-repeat;
+  > {
+    header {
+      height: 2.7em;
+      margin: 0 auto 1em auto;
+      h1 {
+        float: left; }
+      nav {
+        clear: none;
+        margin: .3em 0 0 1.2em;
+        padding: 0;
         float: left;
         display: block;
-        margin: 0 1em 0 0;
-        padding: 0 1em 0 0;
-        font-size: 1em;
-        font-weight: 300;
-        font-family: "Museo", "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif;
-        border-right: 1px #666 solid; }
-        body > header nav li:hover a {
-          color: #658e15; }
-        body > header nav li a {
-          width: 100%;
-          display: block; }
-      body > header nav li.current {
-        font-weight: 300; }
-        body > header nav li.current a {
-          color: #658e15; }
-      body > header nav li:last-child {
-        border: none; }
-    body > header form#search {
-      clear: right;
-      float: right;
-      margin: 0 0 0 4%;
-      width: 31%;
-      margin-left: 1em; }
-  body > article > * {
-    width: 65%; }
-  body article aside {
+        overflow: hidden;
+        ul {
+          display: block;
+          width: 100%; }
+        li {
+          float: left;
+          display: block;
+          margin: 0 1em 0 0;
+          padding: 0 1em 0 0;
+          font-size: 1em;
+          font-weight: 300;
+          font-family: "Museo", "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif;
+          border-right: 1px #666 solid;
+          &:hover a {
+            color: #658e15; }
+          a {
+            width: 100%;
+            display: block; }
+          &.current {
+            font-weight: 300;
+            a {
+              color: #658e15; } }
+          &:last-child {
+            border: none; } } }
+      form#search {
+        clear: right;
+        float: right;
+        margin: 0 0 0 4%;
+        width: 31%;
+        margin-left: 1em; } }
+    article > * {
+      width: 65%; } }
+  article aside {
     clear: right;
     float: right;
     margin: 0 0 0 4%;
     width: 31%; }
-  body > footer section {
+  > footer section {
     float: left;
-    width: 28%; }
-    body > footer section#about {
+    width: 28%;
+    &#about {
       margin-right: 5%; }
-    body > footer section#contact {
+    &#contact {
       clear: right;
       float: right;
       margin: 0 0 0 4%;
-      width: 31%; }
-      body > footer section#contact span.email, body > footer section#contact span.tel, body > footer section#contact span.adr {
-        display: block; }
+      width: 31%;
+      span {
+        &.email, &.tel, &.adr {
+          display: block; } } } } }
 
-article.detail header {
-  width: 100%;
-  height: 12.5em;
-  border: none; }
-  article.detail header h2 {
-    margin: 3.35em 0 0 0;
-    display: inline-block;
-    background-color: #97c02f;
-    padding: 0.25em .5em;
-    color: #fff;
-    font-weight: 500; }
+article {
+  &.detail header {
+    width: 100%;
+    height: 12.5em;
+    border: none;
+    h2 {
+      margin: 3.35em 0 0 0;
+      display: inline-block;
+      background-color: #97c02f;
+      padding: 0.25em .5em;
+      color: #fff;
+      font-weight: 500; } }
+  &.feature {
+    margin-bottom: 1.5em;
+    h2 {
+      margin: .7em 0 .2em 0;
+      text-align: center; }
+    p {
+      margin: 0 2em 1em 2em;
+      text-align: center;
+      font-size: 1.1em;
+      color: #575756; }
+    img {
+      background: #f5f5f5; } }
+  &.highlight {
+    width: 32%;
+    display: block;
+    float: left;
+    margin: 0 2% 0 0;
+    &:last-child {
+      margin-right: 0; }
+    img {
+      padding: 4px;
+      background-color: white; }
+    h3 {
+      font-size: 1.2em;
+      padding: .3em .2em .5em .3em;
+      margin: 0; }
+    p {
+      padding: 0 .2em 0 .3em;
+      margin: 0 0 0.2em 0; }
+    ul li {
+      font-size: .9em; } }
+  &.alert {
+    background: #ebebe2 url("arrow.png") 0.4em 0.3em no-repeat;
+    p {
+      padding-left: 2.2em; } } }
 
 /* content elements */
-article.feature {
-  margin-bottom: 1.5em; }
-  article.feature h2 {
-    margin: .7em 0 .2em 0;
-    text-align: center; }
-  article.feature p {
-    margin: 0 2em 1em 2em;
-    text-align: center;
-    font-size: 1.1em;
-    color: #575756; }
-  article.feature img {
-    background: #f5f5f5; }
-
-article.highlight {
-  width: 32%;
-  display: block;
-  float: left;
-  margin: 0 2% 0 0; }
-  article.highlight:last-child {
-    margin-right: 0; }
-  article.highlight img {
-    padding: 4px;
-    background-color: white; }
-  article.highlight h3 {
-    font-size: 1.2em;
-    padding: .3em .2em .5em .3em;
-    margin: 0; }
-  article.highlight p {
-    padding: 0 .2em 0 .3em;
-    margin: 0 0 0.2em 0; }
-  article.highlight ul li {
-    font-size: .9em; }
-
-article.alert {
-  background: #ebebe2 url("arrow.png") 0.4em 0.3em no-repeat; }
-  article.alert p {
-    padding-left: 2.2em; }
 
 ul.highlight li h3 {
   clear: none;
   padding-top: 0; }
 
 /* components */
+
 #breadcrumbs {
-  margin: 0 0 1em 0; }
-  #breadcrumbs p {
-    font-family: "Museo", "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif; }
+  margin: 0 0 1em 0;
+  p {
+    font-family: "Museo", "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif; } }
 
-#pagination ul {
-  width: 60%; }
-
-#pagination li.previous {
-  float: left; }
+#pagination {
+  ul {
+    width: 60%; }
+  li.previous {
+    float: left; } }
 
 #biography img {
   background-color: #fff;
@@ -178,25 +223,25 @@ section#featured {
   float: left;
   margin: 0;
   width: $column-main - $column-margin;
-  margin-right: $column-margin;
-}
+  margin-right: $column-margin; }
 
 section#etcetera {
   width: $column-misc;
   margin: 0 0 0 $column-main + $column-margin;
-  vertical-align: top;
-}
+  vertical-align: top; }
 */
 
 /* design */
-body > header h1 {
-  font-size: 1.2em;
-  border: none;
-  box-shadow: 0px 2px 3px #999;
-  -moz-box-shadow: 0px 2px 3px #999;
-  -webkit-box-shadow: 0px 2px 3px #999; }
-body > header input[type="submit"] {
-  font-family: "Museo", "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif; }
+
+body > header {
+  h1 {
+    font-size: 1.2em;
+    border: none;
+    box-shadow: 0px 2px 3px #999;
+    -moz-box-shadow: 0px 2px 3px #999;
+    -webkit-box-shadow: 0px 2px 3px #999; }
+  input[type="submit"] {
+    font-family: "Museo", "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif; } }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Museo", "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif;
@@ -206,25 +251,26 @@ ul li {
   margin: 0 .5em 0 2em; }
 
 aside {
-  font-size: 90%; }
-  aside.contents h4 {
-    font-size: .9em;
-    color: #252524;
-    border-bottom: none;
-    font-family: Helvetica, Arial, sans-serif; }
-  aside.contents ul {
-    font-size: .8em;
-    padding: 0;
-    border-bottom: none; }
-  aside.contents ul li {
-    font-family: Helvetica, Arial, sans-serif;
-    line-height: 1.8em;
-    border-bottom: 1px dotted #ababab; }
-  aside.contents ul li a {
-    width: 100%;
-    display: block; }
-  aside.contents ul li:hover {
-    background-color: white; }
+  font-size: 90%;
+  &.contents {
+    h4 {
+      font-size: .9em;
+      color: #252524;
+      border-bottom: none;
+      font-family: Helvetica, Arial, sans-serif; }
+    ul {
+      font-size: .8em;
+      padding: 0;
+      border-bottom: none;
+      li {
+        font-family: Helvetica, Arial, sans-serif;
+        line-height: 1.8em;
+        border-bottom: 1px dotted #ababab;
+        a {
+          width: 100%;
+          display: block; }
+        &:hover {
+          background-color: white; } } } } }
 
 div.note p {
   font-size: .9em;
@@ -237,42 +283,24 @@ div.note p {
   margin-left: -20px;
   padding-left: 20px; }
 
-.align-left {
-  float: left; }
+// 768px
+@media only screen and (min-width: 768px) {
+  @import "320_and_up/768"; }
 
-.align-right {
-  float: right; }
+// 992px
+@media only screen and (min-width: 992px) {
+  @import "320_and_up/992"; }
 
-.align-center {
-  display: block;
-  margin: 0 auto; }
+// 1024px
+@media only screen and (min-width: 1024px) {
+  @import "320_and_up/1024"; }
 
-.caption {
-  border: 1px solid #666;
-  text-align: center;
-  background: #ccc;
-  padding: 10px;
-  margin: 10px; }
+// 1382px
+@media only screen and (min-width: 1382px) {
+  @import "320_and_up/1382"; }
 
-.clearfix {
-  clear: both;
-  float: none;
-  width: 100%; }
-
-.quarter {
-  width: 25%; }
-
-.third {
-  width: 33.3%; }
-
-.two-thirds {
-  width: 66.7%; }
-
-.half {
-  width: 50%; }
-
-.three-quarters {
-  width: 75%; }
-
-.full {
-  width: 100%; }
+// 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+  @import "320_and_up/2x"; }

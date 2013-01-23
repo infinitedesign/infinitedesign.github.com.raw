@@ -1,9 +1,9 @@
 /* ============================================================
 
-320 and Up by Andy Clarke
-Version: 3.0
-URL: http://stuffandnonsense.co.uk/projects/320andup/
-Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+// Blank-Slate
+// Version: 1.0
+// URL: github.com/infinitedesign/blank-slate
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 ============================================================ */
 
@@ -68,40 +68,33 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 //  10. MEDIA QUERIES 		==============================
 
 @media print {
-@import "320_and_up/print";
-}
+  @import "320_and_up/print"; }
 
 // 480px
 @media only screen and (min-width: 480px) {
-@import "320_and_up/480";
-}
+  @import "320_and_up/480"; }
 
 // 600px
 @media only screen and (min-width: 600px) {
-@import "320_and_up/600";
-}
+  @import "320_and_up/600"; }
 
 // 768px
 @media only screen and (min-width: 768px) {
-@import "320_and_up/768";
-}
+  @import "320_and_up/768"; }
 
 // 992px
 @media only screen and (min-width: 992px) {
-@import "320_and_up/992";
-}
+  @import "320_and_up/992"; }
 
 // 1382px
 @media only screen and (min-width: 1382px) {
-@import "320_and_up/1382";
-}
+  @import "320_and_up/1382"; }
 
 // 2x
-@media
-only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5) {
-@import "320_and_up/2x"; }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+  @import "320_and_up/2x"; }
 
 //  11. UPSTARTS 			==============================
 

@@ -1,8 +1,8 @@
 // ==========================================================
 
-// 320 and Up by Andy Clarke
-// Version: 3.0
-// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Blank-Slate
+// Version: 1.0
+// URL: github.com/infinitedesign/blank-slate
 // Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 // ==========================================================
@@ -23,6 +23,7 @@ hr {
 // img
 
 img {
+  // TODO: Considering adding  height: auto;
   max-width : 100%;
   border-width : 0;
   vertical-align : middle;
@@ -57,3 +58,25 @@ figure {
     margin-bottom : 0;
     padding-bottom : 0;
     border-bottom-width : 0; } }
+
+// #elsewhere icon elements
+
+.delicious {
+  background-image: url("../images/delicious.png");
+  background-repeat: no-repeat;
+  background-position: middle; }
+
+.tumblr {
+  background-image: url("../images/tumblr.png");
+  background-repeat: no-repeat;
+  background-position: middle; }
+
+.slideshare {
+  background-image: url("../images/slideshare.png");
+  background-repeat: no-repeat;
+  background-position: middle; }
+
+.twitter {
+  background-image: url("../images/twitter.png");
+  background-repeat: no-repeat;
+  background-position: middle; }

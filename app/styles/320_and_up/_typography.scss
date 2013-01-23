@@ -1,8 +1,8 @@
 // ==========================================================
 
-// 320 and Up by Andy Clarke
-// Version: 3.0
-// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Blank-Slate
+// Version: 1.0
+// URL: github.com/infinitedesign/blank-slate
 // Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 // ==========================================================
@@ -85,7 +85,7 @@ h6,
   height : 16px;
   padding : 0;
   background : transparent url(../img/a-rss.png) no-repeat 0 0;
-  @include hide-text; }
+  @include hide-text(); }
 
 // TYPOGRAPHY ====================================================
 
@@ -111,6 +111,45 @@ li ol {
   margin : 0;
   @include font-size(16); }
 
+// Added from from basic.scss
+ol {
+  li {
+    padding: 0 0 0.5em 0;
+    list-style-type: decimal-leading-zero;
+    list-style-position: inside; } }
+ul {
+  li {
+    padding: 0 0 0.5em 0;
+    margin: 0 0.3em 0 1em;
+    list-style-type: disc;
+    list-style-position: outside; }
+  &.summary {
+    margin-left: 0;
+    li {
+      padding: 0 0 1em 0;
+      margin: 1em 0 0 0;
+      list-style-type: none;
+      border-bottom: 1px dotted #ababab; } }
+  &.highlight {
+    margin-left: 0;
+    li {
+      padding: 0 0 1em 0;
+      margin: 1em 0 0 0;
+      list-style-type: none;
+      border-bottom: 1px dotted #ababab;
+      h3 {
+        font-size: 1.2em;
+        clear: both;
+        padding-top: 0.5em; }
+      img {
+        background-color: #fff;
+        padding: 0.4em;
+        float: left;
+        margin: 0 1.2em 0 0; }
+      p {
+        margin: 0 0 0.3em 0; } } } }
+// end added from basic.scss
+
 // blockquote
 
 blockquote  {
@@ -118,13 +157,29 @@ blockquote  {
   padding-left : $gutterwidth;
   border-left : 2px solid $bordercolor;
   font-family : $altfont;
-  font-style : normal; }
+  font-style : normal;
+  // Added from basic.scss
+  overflow: hidden;
+  &:before {
+    content: "\201C";
+    font-size: 230%;
+    float: left;
+    margin: -0.2em 0 0 0.2em; }
+  p {
+    padding: 0 1.4em 0 2em;
+    font-size: 1em;
+    margin-bottom: 1em;
+    color: #575756;
+    cite {
+      font-size: 1em;
+      font-style: italic;
+      &:before {
+        content: "\2014"; } } } }
+  // end added from basic.scss
 
 q {
   quotes : none; }
 
-blockquote:before,
-blockquote:after,
 q:before,
 q:after {
   content : '';
@@ -150,6 +205,36 @@ dt {
     text-align : right; }
   dd {
     margin-left : 22.78%; } }
+
+// Added from basic.scss
+dl {
+  &.dialogue {
+    dt {
+      margin: 15px 0 0 10%;
+      text-transform: uppercase; }
+    dd {
+      width: 85%;
+      margin: 0 0 0 3%; }
+    .description {
+      font-style: italic; } }
+  &.definition {
+    dt, dd {
+      padding: 0;
+      margin: 0;
+      display: inline; }
+    dt {
+      font-style: italic;
+      &:after {
+        content: ":"; } }
+    dd {
+      span {
+        &:before {
+          content: "\201C"; }
+        &:after {
+          content: "\201D\00a0"; } }
+      a {
+        font-style: italic; } } } }
+// end added from basic.scss
 
 // text-level
 
@@ -186,6 +271,16 @@ pre {
   white-space : pre;
   white-space : pre-wrap;
   word-wrap : break-word; }
+
+code {
+  border: 1px dashed #ccc;
+  background: white url("../images/clipping.png") no-repeat right bottom;
+  .element, .tag {
+    color: blue; }
+  .attribute {
+    color: red; }
+  .text {
+    color: grey; } }
 
 sub,
 sup {
