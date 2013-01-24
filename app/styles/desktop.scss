@@ -2,56 +2,10 @@
 
 /* import */
 
-// Compass
-@import "compass";
-
-/* resets */
-/* already included in basic.scss */
-
-/* variables */
-@import "320_and_up/variables";
-
-/* mixins */
-@import "320_and_up/mixins";
-
-/* helper classes */
-@import "helperclasses";
-
-/* site wide styles (html, body) */
-/* already included in basic.scss */
-
-/* typography */
-/* already included in basic.scss */
-
-/* dimensions */
-/* empty */
-
-/* colours */
-/* already included in basic.scss */
-
-/* texture */
-/* already included in basic.scss */
-
-/* elements */
-/* already included in basic.scss */
-
-/* forms */
-/* already included in basic.scss */
-
-/* buttons */
-/* already included in basic.scss */
-
-/* tables */
-/* already included in basic.scss */
-
-/* page level layout */
-/* already included in basic.scss */
-
-/* print */
-/* already included in basic.scss */
+// Styles for Everything above basic
+@import "advanced";
 
 /* fonts */
-@import "320_and_up/font-awesome";
 /* Museo */
 /*
 @font-face {
@@ -79,20 +33,21 @@
 /* layout */
 
 body {
-  background-image: url("../images/work-in-progress.png");
-  background-position: top right;
-  background-repeat: no-repeat;
+  // background-image: url("../images/work-in-progress.png");
+  // background-position: top right;
+  // background-repeat: no-repeat;
   > {
     header {
       height: 2.7em;
       margin: 0 auto 1em auto;
       h1 {
+        width: 8.5em;
         float: left; }
       nav {
         clear: none;
         margin: .3em 0 0 1.2em;
         padding: 0;
-        float: left;
+        float: right;
         display: block;
         overflow: hidden;
         ul {
@@ -149,11 +104,13 @@ article {
   &.detail header {
     width: 100%;
     height: 12.5em;
+    background-image: url("../images/earthtree-d.jpg");
+    background-position: top left;
     border: none;
     h2 {
-      margin: 3.35em 0 0 0;
+      margin: 6.5em 0 0 1.0em;
       display: inline-block;
-      background-color: #97c02f;
+      background-color:#000;
       padding: 0.25em .5em;
       color: #fff;
       font-weight: 500; } }
@@ -298,9 +255,3 @@ div.note p {
 // 1382px
 @media only screen and (min-width: 1382px) {
   @import "320_and_up/1382"; }
-
-// 2x
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min--moz-device-pixel-ratio: 1.5),
-       only screen and (min-device-pixel-ratio: 1.5) {
-  @import "320_and_up/2x"; }

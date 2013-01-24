@@ -66,14 +66,11 @@
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/apple-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#222222">
+    <meta name="msapplication-TileColor" content="#010075">
 
     <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
-    <!--
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="">
-    -->
+    <meta name="apple-mobile-web-app-title" content="inf">
     <!-- ************************************************** -->
 
 
@@ -81,49 +78,47 @@
     <!--
     <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
     -->
-
-
-    <style type="text/css">
-      article.detail > header { border-top: 8px solid #C93213; }
-      @media screen and (min-width: 640px) {
-        article.detail > header { background-image: url("images/header.png"); background-position: top right; border: none; }
-        article.detail > header h2 { background-color:#C93213; } }
-    </style>
-
   </head>
 
   <body>
     <header role="banner">
-      <h1><a href="index.html">Blank-Slate</a></h1>
+      <h1><a href="index.html">infiniteDesign</a></h1>
 
       <nav>
+        <div class="divider">|</div>
         <ul>
-          <li ><a href="/articles/index.html">articles</a></li>
-          <li ><a href="/projects/index.html">projects</a></li>
+          <li><a href="/articles/index.html">projects</a></li>
+          <li><a href="/projects/index.html">contact</a></li>
         </ul>
       </nav>
 
+      <!-- search currently disabled -->
+      <!--
       <form id="search" method="post" action="search.html">
         <input type="text" name="search" placeholder="search..." />
         <input type="submit" name="sa" value="go" />
       </form>
+      -->
     </header>
 
 
     <article class="detail wrap" id="top">
+  <!-- breadcrumbs currently disabled -->
+  <!--
   <nav id="breadcrumbs">
       <p><a href="/homepage/">Home</a>&nbsp;&gt;&nbsp;<a href="../">About</a>&nbsp;&gt;&nbsp;About this site...</p>
   </nav>
+  -->
 
   <header>
-        <h2>About Blank-Slate...</h2>
+        <h2>Unlimited Possibilities</h2>
   </header>
 
   <aside class="contents">
         <h4>Contents</h4>
     <ul>
-        <li><a href="../">About Blank-Slate</a></li>
-            <li>Contact Info</li>
+        <li><a href="../">About infiniteDesign</a></li>
+        <li><a href="#contact">Contact Info</a></li>
     </ul>
   </aside>
 
@@ -183,13 +178,14 @@
   <p>Spreadsheet Log:  <a href="http://spreadsheets.google.com/ccc?key=0AglzInh14B_-dFZsaHA5SmllX0dlVmUtaEpVLWNhbVE&hl=en">a log  of all supported browsers</a>.</p>
 
   <section id="related">
-    <h4>Related Articles</h4>
+    <h4>Influences and Tools</h4>
     <nav>
       <ul>
-        <li><a href="#">Blank-Slate Premere</a></li>
-        <li><a href="#">Other Tips</a></li>
-        <li><a href="#">RWD Man...</a></li>
-        <li><a href="#">Progressively Enhance Your Mind</a></li>
+        <li><a href="#">Yeoman</a></li>
+        <li><a href="#">nanoc</a></li>
+        <li><a href="#">Yiibu</a></li>
+        <li><a href="#">320 and Up</a></li>
+        <li><a href="#">Mobile Boilerplate</a></li>
       </ul>
     </nav>
   </section>
@@ -198,9 +194,9 @@
     <footer role="contentinfo">
       <div>
         <section id="about">
-          <h3>Atributions</h3>
+          <h3>Our Vision</h3>
           <p>
-            <small>&#8216;Blank-Slate&#8217; would simply not be possible without <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, <a href="http://framelessgrid.com/">Frameless grid</a> and <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>. Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. The Font Awesome webfont, CSS, and LESS files are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</small>
+            <strong>infiniteDesign means unlimited possibilities.</strong> What do you want to create? You dream it. We'll build it.
             <!-- TODO: Add other atributions: Yeoman, nanoc, etc (more?) -->
           </p>
         </section>
@@ -208,10 +204,8 @@
         <section id="elsewhere">
           <h3>Elsewhere</h3>
           <ul>
-            <li><a href="http://twitter.com/blank-slate" class="twitter" title="Tweets.">Twitter</a></li>
-            <li><a href="http://blank-slate.tumblr.com/" class="tumblr" title="Blog?">Tumblr</a></li>
-            <li><a href="http://www.delicious.com/blank-slate" class="delicious" title="Bookmarks!">Delicious</a></li>
-            <li><a href="http://www.slideshare.net/blank-slate" class="slideshare" title="Slideshows.">SlideShare</a></li>
+            <li><a href="http://twitter.com/thomassample" class="twitter" title="Tweets.">Twitter</a></li>
+            <li><a href="http://github.com/infinitedesign" class="github" title="Let's git it on.">GitHub</a></li>
           </ul>
         </section>
 
@@ -226,7 +220,6 @@
               <span class="locality">New York City</span>, <span class="country-name">United States</span>
             </span>
           </p>
-          <p class="license">Unless otherwise noted, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
         </section>
       </div>
     </footer>

@@ -1,0 +1,79 @@
+/* _advanced.css Stylesheet */
+
+/* import */
+
+// Compass
+@import "compass";
+
+/* resets */
+/* already included in basic.scss */
+
+/* variables */
+@import "320_and_up/variables";
+
+/* mixins */
+@import "320_and_up/mixins";
+
+/* helper classes */
+@import "helperclasses";
+
+/* site wide styles (html, body) */
+/* already included in basic.scss */
+
+/* typography */
+/* already included in basic.scss */
+
+/* dimensions */
+/* empty */
+
+/* colours */
+/* already included in basic.scss */
+
+/* texture */
+/* already included in basic.scss */
+
+/* elements */
+/* already included in basic.scss */
+
+/* forms */
+/* already included in basic.scss */
+
+/* buttons */
+/* already included in basic.scss */
+
+/* tables */
+/* already included in basic.scss */
+
+/* page level layout */
+/* already included in basic.scss */
+
+/* print */
+/* already included in basic.scss */
+
+/* fonts */
+@import "320_and_up/font-awesome";
+
+/* layout */
+body > header {
+  h1 a {
+    @include hide-text();
+    background-image: url("../images/logo-m.png"); }
+  nav div.divider {
+    @include hide-text(); } }
+
+
+/* content elements */
+
+
+
+/* components */
+
+
+
+
+
+// 2x
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+  @import "320_and_up/2x"; }
