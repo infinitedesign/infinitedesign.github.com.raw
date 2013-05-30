@@ -19,7 +19,7 @@ module.exports = function( grunt ) {
     coffee: {
       compile: {
         files: {
-          'temp/scripts/*.js': 'app/scripts/**/*.coffee' 
+          'temp/scripts/*.js': 'app/scripts/**/*.coffee'
         },
         options: {
           basePath: 'app/scripts'
@@ -143,7 +143,7 @@ module.exports = function( grunt ) {
 
     // update references in HTML/CSS to revved files
     usemin: {
-      html: ['**/*.html'],
+      html: ['**/*.html', '!**/templates/**/*.html'],
       css: ['**/*.css']
     },
 

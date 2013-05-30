@@ -22,9 +22,7 @@
 
 
 compile '*' do
-  if item.binary?
-    # don’t filter binary items
-  else
+  unless @item.binary?
     filter :erb
     layout 'default'
   end

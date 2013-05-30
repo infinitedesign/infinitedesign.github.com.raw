@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<!-- TODO: Do these html declaration tags need the .oldie class too? -->
+<!-- Alternate format available in responsive-type.php: check which one should be used -->
+<!-- ie6, ie7, ie8, oldie: classes in IE if statements in respnsive-type.php -->
+
+<!-- HTML5 Mobile Boilerplate -->
+<!--[if IEMobile 7]><html class="no-js iem7"><![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <title>InfiniteDesign - <%= @item[:title] %></title>
+    <!-- ************************************************** -->
+    <!-- Meta Tags etc -->
+    <!-- ************************************************** -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="InfiniteDesign" />
+    <meta name="description" content="Progressive Enhancement Mobile First Responsive Web Design" />
+    <meta name="keywords" content="mobile, responsive, progressive, web, design, experience" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="cleartype" content="on">
+    <link rel="alternate" type="application/rss+xml" title="Blank-Slate RSS feed" href="http://infinitedesign.co/index.xml" />
+
+
+    <!-- ************************************************** -->
+    <!-- Stylesheets -->
+    <!-- ************************************************** -->
+    <link rel="stylesheet" type="text/css" href="<%= @item[:level] %>styles/basic.css" media="screen, handheld" />
+    <link rel="stylesheet" type="text/css" href="<%= @item[:level] %>styles/mobile.css" media="only screen and (min-width: 320px) and (max-width: 720px)" />
+    <link rel="stylesheet" type="text/css" href="<%= @item[:level] %>styles/desktop.css" media="only screen and (min-width: 720px)" />
+    <!-- For all browsers -->
+    <!-- <link rel="stylesheet" type="text/css" href="<%= @item[:level] %>styles/main.css"> -->
+
+
+    <!-- ************************************************** -->
+    <!-- JavaScript -->
+    <!-- ************************************************** -->
+    <!--[if (lt IE 9) & (!IEMobile)]>
+      <script src="<%= @item[:level] %>scripts/vendor/selectivizr-min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="<%= @item[:level] %>scripts/vendor/modernizr.min.js"></script>
+
+
+    <!-- ************************************************** -->
+    <!-- Icons -->
+    <!-- ************************************************** -->
+    <!-- 16x16 -->
+    <link rel="shortcut icon" href="<%= @item[:level] %>favicon.ico">
+    <!-- 32x32 -->
+    <link rel="shortcut icon" href="<%= @item[:level] %>images/favicon.png">
+
+    <!-- iOS apple-touch-icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= @item[:level] %>images/touch/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= @item[:level] %>images/touch/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= @item[:level] %>images/touch/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="<%= @item[:level] %>images/touch/apple-touch-icon-57x57-precomposed.png">
+    <link rel="shortcut icon" href="<%= @item[:level] %>images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="<%= @item[:level] %>images/touch/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#010075">
+
+    <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="inf">
+    <!-- ************************************************** -->
+
+
+    <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+    <!--
+    <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+    -->
+  </head>
