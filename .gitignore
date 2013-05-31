@@ -1,2 +1,7 @@
 temp
 dist
+.sass-cache
+.DS_Store
+app/.DS_Store
+app/templates/nanoc-blank-slate/tmp
+app/templates/nanoc-blank-slate/crash.log
