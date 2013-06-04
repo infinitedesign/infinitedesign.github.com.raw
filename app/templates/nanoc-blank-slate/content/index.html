@@ -18,13 +18,7 @@ tags:
         <h2>Unlimited Possibilities</h2>
   </header>
 
-  <aside class="contents">
-        <h4>Contents</h4>
-    <ul>
-        <li><a href="../">About infiniteDesign</a></li>
-        <li><a href="#contact">Contact Info</a></li>
-    </ul>
-  </aside>
+  <%= render 'contents' %>
 
   <h3>Mobile First. Progressive Enhancement. Responsive Web Design.</h3>
   <p>Today's web is dynamic. The desktop-centric designs that dominated the web only a few years ago are becoming obsolete. Tablets. Phones. E-Readers. Laptops. A myriad of different resolutions and screen sizes.</p>
@@ -42,13 +36,14 @@ tags:
   <aside>
     <div class="note blue">
       <p>
-        The hybrid is an amalegom of Yeoman, nanoc, Yiibu, and 320andUp. Progressive Enhancement Mobile First Responsive Web Design creates <em>Beautiful</em> Web Experiences<a href="about/index.html" title="More about Blank-Slate...">More...</a>
+        The hybrid is an amalegom of Yeoman, nanoc, Yiibu, and 320andUp. Progressive Enhancement Mobile First Responsive Web Design creates <em>Beautiful</em> Web Experiences.
       </p>
     </div>
   </aside>
 
   <h3>The Process</h3>
   <p>Our design process starts with mobile first. Only the essentials. By identifying what is truly important to your users, we eliminate waste. Pages load faster. Conversion rates go up. Customers are happpy.</p>
+  <h3>Next</h3>
   <p>Adding eye-catching visuals is easy when you've identified what's important. Instead of trying to fit more and more into a smaller and smaller screen. We add more features only when the device and screen size allows.</p>
 
   <aside>
@@ -58,40 +53,24 @@ tags:
   </aside>
 
   <h3>Awesome</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quod non ratione harum architecto cumque excepturi dolorum repellendus odio nihil possimus alias necessitatibus aspernatur obcaecati eveniet suscipit laboriosam voluptate assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium consectetur at dolor qui similique ullam quisquam id ex quasi commodi. Cupiditate repudiandae vel alias accusamus nobis quasi iste. Qui incidunt!Itaque tempore aliquid eos libero placeat accusantium pariatur doloremque harum in aliquam nemo quaerat sed cum deserunt ad rem ratione voluptatum explicabo nobis dolores hic suscipit sequi non beatae excepturi!Quos eos placeat eligendi sint aspernatur quo quidem doloribus exercitationem in hic. Sunt ipsum illum culpa necessitatibus consequatur animi minima totam reiciendis corporis repellendus porro veniam cum ex molestiae est.</p>
+  <p>There's no point creating something that only looks good on a PC. Mobile Traffic has been growing at a pace of 150% per Year. This trendline will likely hold or even accelerate:</p>
+
+  <h4 class="table-title">Global Mobile Traffic as % of Total Internet Traffic</h4>
+  <img class="end-section" src="<%= @item[:level] %>images/mobile-traffic.jpg" alt="Mobile Traffic Trends" />
 
   <aside>
     <div class="note blue">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam officiis tempore quia et nesciunt porro itaque laudantium eum aperiam molestias dicta autem quisquam iusto assumenda consectetur quas minus cupiditate. Quam?</p>
+      <p>The above graph is displayed for informational purposes only.</p>
     </div>
   </aside>
 
-  <h3>Sweet!</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit fugit debitis magnam at quaerat et nostrum quia a est labore consequatur praesentium natus veritatis ut eaque sit tempora ducimus obcaecati.</p>
-  <ul>
-      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam velit omnis aspernatur fugit nisi consequatur deleniti nemo eum quis laborum architecto quam ab dolorum hic nulla porro eveniet perferendis repudiandae.</li>
-      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod molestias amet corporis atque sint recusandae ipsam! Temporibus dicta veniam aliquid cumque rem nemo provident nisi aut debitis sequi odit vitae.</li>
-      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eveniet dolore culpa quidem repellendus nostrum voluptates non! Dolore consequatur nesciunt mollitia cupiditate ex illo fugit quas ea accusamus iure. Dolor.</li>
-      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod enim quas qui quidem magni cupiditate placeat inventore quo accusamus deleniti sapiente voluptas labore consequuntur odio pariatur. Nostrum sit assumenda accusantium!</li>
-      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nemo consequatur cum quia natus rem nostrum quidem voluptatem at hic a cumque fuga voluptatum vel obcaecati velit temporibus beatae consectetur.</li>
-  </ul>
-
-
+  <h3>Constantly Learning</h3>
+  <p>Here at infiniteDesign we truely recognize the importance on constant improvement. Always on the look out for new technology, we strive to stay on the cutting edge of the mobile-first responsive web. Have a tip you'd like to share with us? We'd always love your input.</p>
 
   <h3>Supported browsers and devices</h3>
   <p>At the moment we can confidently state that this site works beautifully on most modern smartphones, many legacy smartphones, and most tablets and desktop browsers.</p>
   <p>Spreadsheet Log:  <a href="http://spreadsheets.google.com/ccc?key=0AglzInh14B_-dFZsaHA5SmllX0dlVmUtaEpVLWNhbVE&hl=en">a log  of all supported browsers</a>.</p>
 
-  <section id="related">
-    <h4>Influences and Tools</h4>
-    <nav>
-      <ul>
-        <li><a href="#">Yeoman</a></li>
-        <li><a href="#">nanoc</a></li>
-        <li><a href="#">Yiibu</a></li>
-        <li><a href="#">320 and Up</a></li>
-        <li><a href="#">Mobile Boilerplate</a></li>
-      </ul>
-    </nav>
-  </section>
+  <%= render 'related' %>
+
 </article>

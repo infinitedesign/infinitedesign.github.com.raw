@@ -1,5 +1,5 @@
 ---
-title: A New Item
+title: Contact
 level: ../
 ---
 <article class="detail wrap" id="top">
@@ -14,13 +14,7 @@ level: ../
         <h2>Contact</h2>
   </header>
 
-  <aside class="contents">
-        <h4>Contents</h4>
-    <ul>
-        <li><a href="../">About Us</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-  </aside>
+  <%= render 'contents' %>
 
   <h3>Getting in touch with us is easy.</h3>
   <aside>
@@ -45,14 +39,6 @@ level: ../
   <p>Form-Goes-Here</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure iusto quod officiis quo libero perferendis culpa praesentium omnis atque suscipit ea quibusdam ab aspernatur doloribus et nobis tempora neque? Voluptatem? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus similique temporibus suscipit accusantium fugiat ut natus dolore molestias quae est odit vitae deserunt officiis mollitia ullam voluptatum tenetur placeat tempora.</p>
 
-  <section id="related">
-    <h4>Related</h4>
-    <nav>
-      <ul>
-        <li><a href="/">About Us</a></li>
-        <li><a href="/projects/">Projects</a></li>
-        <li><a href="/contact/">Contact</a></li>
-      </ul>
-    </nav>
-  </section>
+  <%= render 'related' %>
+
 </article>
