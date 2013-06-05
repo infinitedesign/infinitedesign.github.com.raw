@@ -1,5 +1,5 @@
 ---
-title: A New Item
+title: Projects
 level: ../
 ---
 
@@ -12,12 +12,12 @@ level: ../
   -->
 
   <header>
-        <h2>Projects</h2>
+        <h2><%= @site.config[:sec1_heading] %></h2>
   </header>
 
   <%= render 'contents' %>
 
-  <h3>Mobile First + Responsive Web Design + Progressive Enhancement</h3>
+  <h3><%= @site.config[:sec1_slogan] %></h3>
   <p>You do the math.<p>
   <p>All of our websites are built with these same best practices for web development. We start with Mobile First -- and then move on down the list through feature phones, smartphones, tablets, laptops, desktops, and even TV. Each time the viewing device changes, our design responds. The static web is gone.</p>
   <p><strong>Dynamic Web Experiences</strong> drive us to build beautiful, easy-to-use websites that just make sense.</p>

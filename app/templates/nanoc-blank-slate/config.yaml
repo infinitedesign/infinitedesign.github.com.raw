@@ -75,3 +75,24 @@ watcher:
   # When to send notifications (using Growl or notify-send).
   notify_on_compilation_success: true
   notify_on_compilation_failure: true
+
+company: 'MFRWDesign'
+phone: '+1-888-887-3334'
+phonelink: '+18888873334'
+city: 'New York City'
+country: 'United States'
+email: 'thomas@infinitedesign.co'
+twitter: 'thomassample'
+github: 'infinitedesign'
+
+sec0: 'homepage'
+sec0_heading: 'Unlimited Possibilities'
+sec0_slogan: 'Mobile First. Progressive Enhacement. Responsive Web Design.'
+
+sec1: 'projects'
+sec1_heading: 'Projects'
+sec1_slogan: 'Mobile First + Responsive Web Design + Progressive Enhancement'
+
+sec2: 'contact'
+sec2_heading: 'Contact'
+sec2_slogan: 'Getting in touch with us is easy.'

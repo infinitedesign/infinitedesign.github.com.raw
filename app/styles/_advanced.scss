@@ -57,13 +57,17 @@
 body > header {
   h1 a {
     @include hide-text();
-    background-image: url("../images/logo-m.png"); }
+    background-image: $logo-m-url; }
   nav div.divider {
     @include hide-text(); } }
 
 
 /* content elements */
-
+ul,
+ol {
+  margin-left: 0;
+  padding-left: 0;
+}
 
 
 /* components */

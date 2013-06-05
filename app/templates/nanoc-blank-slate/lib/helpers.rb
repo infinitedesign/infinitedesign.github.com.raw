@@ -14,3 +14,4 @@ include Nanoc::Helpers::Breadcrumbs # breadcrumbs_trail() → Array
 
 # Finding items by identifier
 # @items['/blah/'] → returns the item with identifier '/blah/'
+

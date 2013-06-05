@@ -31,6 +31,10 @@ a {
   &:active {
     outline : 0; } }
 
+h1 > a:visited {
+  color: $altlinkcolor;
+}
+
 ::-moz-selection {
   background-color : lighten($basecolor, 65%);
   color : $basecolor;

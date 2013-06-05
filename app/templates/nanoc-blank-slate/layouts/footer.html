@@ -11,8 +11,8 @@
     <section id="elsewhere">
       <h3>Elsewhere</h3>
       <ul>
-        <li><a href="http://twitter.com/thomassample" class="twitter" title="Tweets.">Twitter</a></li>
-        <li><a href="http://github.com/infinitedesign" class="github" title="Let's git it on.">GitHub</a></li>
+        <li><a href="http://twitter.com/<%= @site.config[:twitter] %>" class="twitter" title="Tweets.">Twitter</a></li>
+        <li><a href="http://github.com/<%= @site.config[:github] %>" class="github" title="Let's git it on.">GitHub</a></li>
       </ul>
     </section>
 
@@ -20,11 +20,11 @@
       <h3>Contact</h3>
       <p class="vcard">
         <span class="email">
-          <a href="mailto:thomas@infinitedesign.co?subject=Hello There">thomas@infinitedesign.co</a>
+          <a href="mailto:<%= @site.config[:email] %>?subject=Hello There"><%= @site.config[:email] %></a>
         </span>
-        <span class="tel"><a href="tel:+18888873334">+1-888-887-3334</a></span>
+        <span class="tel"><a href="tel:<%= @site.config[:phonelink] %>"><%= @site.config[:phone] %></a></span>
         <span class="adr">
-          <span class="locality">New York City</span>, <span class="country-name">United States</span>
+          <span class="locality"><%= @site.config[:city] %></span>, <span class="country-name"><%= @site.config[:country] %></span>
         </span>
       </p>
     </section>

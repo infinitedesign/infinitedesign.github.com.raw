@@ -11,6 +11,10 @@
 
 // greyscale
 
+$logo-m-url: url("../images/logo-m.png");
+$splash-m2-url: url("../images/earthtree-m2.jpg");
+$splash-d-url: url("../images/earthtree-d.jpg");
+
 $black 			: rgb(0,0,0);
 $darkgrey 		: lighten($black, 25%);
 $grey 			: lighten($black, 50%);
@@ -49,6 +53,11 @@ $linkcolor 		    : rgb(1,53,104);
 $linkcolorhover 	: darken($linkcolor, 10);
 $linkcolorvisited   : darken($linkcolorhover, 10);
 $linkcolorfocus 	: darken($linkcolorvisited, 10);
+
+$altlinkcolor        : $white;
+$altlinkcolorhover   : darken($altlinkcolor, 10);
+$altlinkcolorvisited   : darken($altlinkcolorhover, 10);
+$altlinkcolorfocus   : darken($altlinkcolorvisited, 10);
 
 // colour palettes
 

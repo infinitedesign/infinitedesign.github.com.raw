@@ -1,9 +1,5 @@
 ---
 title: Home
-tags:
-  - foo
-  - bar
-  - baz
 ---
 
 <article class="detail wrap" id="top">
@@ -15,12 +11,12 @@ tags:
   -->
 
   <header>
-        <h2>Unlimited Possibilities</h2>
+        <h2><%= @site.config[:sec0_heading] %></h2>
   </header>
 
   <%= render 'contents' %>
 
-  <h3>Mobile First. Progressive Enhancement. Responsive Web Design.</h3>
+  <h3><%= @site.config[:sec0_slogan] %></h3>
   <p>Today's web is dynamic. The desktop-centric designs that dominated the web only a few years ago are becoming obsolete. Tablets. Phones. E-Readers. Laptops. A myriad of different resolutions and screen sizes.</p>
   <p>These are no longer simply websites. These are <strong>dynamic web experiences</strong>.</p>
 

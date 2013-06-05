@@ -11,12 +11,12 @@ level: ../
   -->
 
   <header>
-        <h2>Contact</h2>
+        <h2><%= @site.config[:sec2_heading] %></h2>
   </header>
 
   <%= render 'contents' %>
 
-  <h3>Getting in touch with us is easy.</h3>
+  <h3><%= @site.config[:sec2_slogan] %></h3>
   <aside>
     <div class="note blue">
       <p>
@@ -25,19 +25,21 @@ level: ../
     </div>
   </aside>
   <p>Email, call, or fill out the form below and we'll get back to you as soon as possible.</p>
+  <p><a href="mailto:<%= @site.config[:email] %>?subject=Hello There"><%= @site.config[:email] %></a></p>
+  <p><a href="tel:<%= @site.config[:phonelink] %>"><%= @site.config[:phone] %></a></p>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 
-  <p class="vcard">
-    <span class="email">
-      <a href="mailto:thomas@infinitedesign.co?subject=Hello There">thomas@infinitedesign.co</a>
-    </span>
-    <span class="tel"><a href="tel:+18888873334">+1-888-887-3334</a></span>
-    <span class="adr">
-      <span class="locality">New York City</span>, <span class="country-name">United States</span>
-    </span>
-  </p>
-
-  <p>Form-Goes-Here</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure iusto quod officiis quo libero perferendis culpa praesentium omnis atque suscipit ea quibusdam ab aspernatur doloribus et nobis tempora neque? Voluptatem? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus similique temporibus suscipit accusantium fugiat ut natus dolore molestias quae est odit vitae deserunt officiis mollitia ullam voluptatum tenetur placeat tempora.</p>
 
   <%= render 'related' %>
 
